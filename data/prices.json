@@ -1,0 +1,34 @@
+{
+  "crops": [
+    { "id": 1, "name": "طماطم", "category": "vegetables", "price": 18.5, "unit": "ج.م / كغ", "change": 4.5, "icon": "🍅" },
+    { "id": 2, "name": "بطاطس", "category": "vegetables", "price": 21.0, "unit": "ج.م / كغ", "change": 2.8, "icon": "🥔" },
+    { "id": 3, "name": "بصل", "category": "vegetables", "price": 15.5, "unit": "ج.م / كغ", "change": -1.2, "icon": "🧅" },
+    { "id": 4, "name": "خيار", "category": "vegetables", "price": 15.0, "unit": "ج.م / كغ", "change": 3.1, "icon": "🥒" },
+    { "id": 5, "name": "ثوم", "category": "vegetables", "price": 72.0, "unit": "ج.م / كغ", "change": 6.2, "icon": "🧄" },
+    { "id": 6, "name": "فلفل أخضر", "category": "vegetables", "price": 26.0, "unit": "ج.م / كغ", "change": 1.7, "icon": "🫑" },
+    { "id": 7, "name": "ملفوف", "category": "vegetables", "price": 11.5, "unit": "ج.م / كغ", "change": -0.8, "icon": "🥬" },
+    { "id": 8, "name": "جرجير", "category": "vegetables", "price": 9.5, "unit": "ج.م / كغ", "change": 2.4, "icon": "🌿" },
+    { "id": 9, "name": "جزر", "category": "vegetables", "price": 13.0, "unit": "ج.م / كغ", "change": 0.0, "icon": "🥕" },
+    { "id": 10, "name": "فجل", "category": "vegetables", "price": 10.5, "unit": "ج.م / كغ", "change": -2.1, "icon": "🌶️" },
+
+    { "id": 11, "name": "تفاح بلدي", "category": "fruits", "price": 48.0, "unit": "ج.م / كغ", "change": 5.4, "icon": "🍏" },
+    { "id": 12, "name": "تفاح مستورد", "category": "fruits", "price": 55.0, "unit": "ج.م / كغ", "change": 3.6, "icon": "🍎" },
+    { "id": 13, "name": "موز", "category": "fruits", "price": 22.0, "unit": "ج.م / كغ", "change": -1.5, "icon": "🍌" },
+    { "id": 14, "name": "برتقال", "category": "fruits", "price": 29.0, "unit": "ج.م / كغ", "change": 2.3, "icon": "🍊" },
+    { "id": 15, "name": "ليمون", "category": "fruits", "price": 17.5, "unit": "ج.م / كغ", "change": 1.8, "icon": "🍋" },
+    { "id": 16, "name": "عنب", "category": "fruits", "price": 36.0, "unit": "ج.م / كغ", "change": 4.0, "icon": "🍇" },
+    { "id": 17, "name": "مشمش", "category": "fruits", "price": 32.0, "unit": "ج.م / كغ", "change": -0.9, "icon": "🍑" },
+    { "id": 18, "name": "رمان", "category": "fruits", "price": 42.0, "unit": "ج.م / كغ", "change": 2.7, "icon": "🍎" },
+    { "id": 19, "name": "خوخ", "category": "fruits", "price": 31.0, "unit": "ج.م / كغ", "change": 0.0, "icon": "🍑" },
+    { "id": 20, "name": "كريز", "category": "fruits", "price": 68.0, "unit": "ج.م / كغ", "change": 7.1, "icon": "🍒" },
+
+    { "id": 21, "name": "أرز مصري", "category": "grains", "price": 30.0, "unit": "ج.م / كغ", "change": 1.4, "icon": "🌾" },
+    { "id": 22, "name": "قمح", "category": "grains", "price": 20.0, "unit": "ج.م / كغ", "change": 2.2, "icon": "🌾" },
+    { "id": 23, "name": "عدس", "category": "grains", "price": 60.0, "unit": "ج.م / كغ", "change": 3.3, "icon": "🫘" },
+    { "id": 24, "name": "شعير", "category": "grains", "price": 17.5, "unit": "ج.م / كغ", "change": -1.8, "icon": "🌾" },
+    { "id": 25, "name": "ذرة", "category": "grains", "price": 16.5, "unit": "ج.م / كغ", "change": 0.5, "icon": "🌽" },
+    { "id": 26, "name": "فول", "category": "grains", "price": 34.0, "unit": "ج.م / كغ", "change": 2.9, "icon": "🫘" },
+    { "id": 27, "name": "لوبيا", "category": "grains", "price": 26.5, "unit": "ج.م / كغ", "change": -0.7, "icon": "🫘" },
+    { "id": 28, "name": "سمسم", "category": "grains", "price": 46.0, "unit": "ج.م / كغ", "change": 5.1, "icon": "🌾" }
+  ]
+}

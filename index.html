@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2e7d32" />
+    <meta name="description" content="تطبيق زراعي ذكي لفحص المحاصيل وتحليل السوق" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+    <title>مُنقذ المحاصيل والسوق الزراعي</title>
+  </head>
+  <body>
+    <header class="app-header" aria-label="رأس التطبيق">
+      <div class="header-brand">
+        <div class="logo">🌱</div>
+        <div>
+          <p class="header-kicker">تطبيق زراعي ذكي</p>
+          <h1>مُنقذ المحاصيل والسوق الزراعي</h1>
+        </div>
+      </div>
+
+      <div class="status-badge" aria-live="polite" aria-label="حالة الاتصال">
+        <span class="status-dot online" aria-hidden="true"></span>
+        <span>📶 متصل / أوفلاين</span>
+      </div>
+      <button type="button" class="info-button" id="infoBtn" aria-haspopup="dialog" aria-controls="infoModal">
+        عن التطبيق
+      </button>
+    </header>
+
+    <main class="app-main">
+      <section class="panel scanner-panel" aria-labelledby="crop-scan-title">
+        <div class="section-header">
+          <h2 id="crop-scan-title">📸 فحص وآفات المحصول الذكي</h2>
+          <p>صوّر الورقة أو المحصول التالف للتشخيص بالذكاء الاصطناعي:</p>
+        </div>
+
+        <div class="upload-area">
+          <input
+            id="crop-image-input"
+            type="file"
+            accept="image/*"
+            capture="environment"
+            aria-label="اختر صورة المحصول"
+            hidden
+          />
+
+          <div class="upload-actions">
+            <label for="crop-image-input" class="btn btn-primary" role="button" aria-label="اختر صورة">
+              📁 اختر صورة
+            </label>
+            <button type="button" class="btn btn-secondary" aria-label="استخدم الكاميرا">
+              📷 الكاميرا
+            </button>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-accent analyze-btn" aria-label="حلّل المحصول واستخراج العلاج">
+          🔍 تحليل المحصول واستخراج العلاج
+        </button>
+
+        <div class="result-box" id="ai-result-box" aria-live="polite" aria-label="نتيجة التشخيص">
+          <h3>نتيجة التشخيص</h3>
+          <p>لم يتم تحليل الصورة بعد. قم بتحميل صورة المحصول لعرض التشخيص وخطوات العلاج.</p>
+        </div>
+      </section>
+
+      <section class="panel market-panel" aria-labelledby="market-prices-title">
+        <div class="market-header">
+          <div>
+            <h2 id="market-prices-title">📈 أسعار السوق اليومية (سوق الجملة)</h2>
+          </div>
+          <button type="button" class="btn btn-secondary refresh-btn" aria-label="تحديث الأسعار">
+            🔄 تحديث الأسعار
+          </button>
+        </div>
+
+        <div class="market-controls">
+          <input
+            id="market-search"
+            type="search"
+            placeholder="ابحث عن محصول... (مثل طماطم، قمح)"
+            aria-label="ابحث عن محصول"
+          />
+        </div>
+
+        <div class="category-tabs" role="tablist" aria-label="أقسام السوق">
+          <button type="button" class="tab active" role="tab" aria-selected="true">الكل</button>
+          <button type="button" class="tab" role="tab" aria-selected="false">🥦 خضروات</button>
+          <button type="button" class="tab" role="tab" aria-selected="false">🍎 فاكهة</button>
+          <button type="button" class="tab" role="tab" aria-selected="false">🌾 حبوب وبقوليات</button>
+        </div>
+
+        <div class="price-grid" aria-label="بطاقات أسعار السوق">
+          <article class="price-card" data-category="vegetable" data-name="طماطم">
+            <div class="price-top">
+              <h3>طماطم</h3>
+              <span class="trend up">▲</span>
+            </div>
+            <p class="price">2.40 ر.س / كغ</p>
+            <small>تغير: +3.2%</small>
+          </article>
+
+          <article class="price-card" data-category="vegetable" data-name="بطاطس">
+            <div class="price-top">
+              <h3>بطاطس</h3>
+              <span class="trend down">▼</span>
+            </div>
+            <p class="price">1.85 ر.س / كغ</p>
+            <small>تغير: -1.4%</small>
+          </article>
+
+          <article class="price-card" data-category="vegetable" data-name="بصل">
+            <div class="price-top">
+              <h3>بصل</h3>
+              <span class="trend up">▲</span>
+            </div>
+            <p class="price">1.95 ر.س / كغ</p>
+            <small>تغير: +2.1%</small>
+          </article>
+
+          <article class="price-card" data-category="grain" data-name="قمح">
+            <div class="price-top">
+              <h3>قمح</h3>
+              <span class="trend flat">•</span>
+            </div>
+            <p class="price">1.60 ر.س / كغ</p>
+            <small>تغير: 0.0%</small>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="infoModal" class="info-modal" aria-labelledby="infoModalTitle">
+      <div class="info-modal-content">
+        <button type="button" class="info-modal-close" id="closeModal" aria-label="إغلاق نافذة عن التطبيق">×</button>
+        <h2 id="infoModalTitle">عن التطبيق والأهداف</h2>
+        <p>
+          مُنقذ المحاصيل والسوق الزراعي تطبيق توعوي يخدم المزارعين في مصر، ويجمع إرشادات
+          أولية للمحاصيل مع مؤشرات أسعار تقديرية للسوق بالجنيه المصري.
+        </p>
+        <h3>أهداف المشروع</h3>
+        <ul>
+          <li>دعم الوعي المبكر بآفات المحاصيل وتشجيع طلب الإرشاد الزراعي المختص.</li>
+          <li>تسهيل متابعة أسعار الخضروات والفاكهة والحبوب في واجهة عربية واضحة.</li>
+          <li>إتاحة بيانات الأسعار الأساسية عند انقطاع الإنترنت بعد تحميلها لأول مرة.</li>
+        </ul>
+        <p class="info-modal-note">
+          نتائج الذكاء الاصطناعي والأسعار المولّدة تقديرية، ولا تُعد تشخيصاً زراعياً أو تسعيرة رسمية.
+        </p>
+      </div>
+    </dialog>
+
+    <footer class="app-footer" aria-label="تذييل التطبيق">
+      <button type="button" class="install-banner" aria-label="تثبيت التطبيق على الشاشة الرئيسية">
+        📲 اضغط هنا لتثبيت التطبيق على الشاشة الرئيسية
+      </button>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

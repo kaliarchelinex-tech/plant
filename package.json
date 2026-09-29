@@ -1,0 +1,20 @@
+{
+	"name": "my-smartagri-app",
+	"version": "1.0.0",
+	"description": "تطبيق زراعي ذكي لتشخيص آفات المحاصيل بالذكاء الاصطناعي ومتابعة أسعار السوق اليومية بدون إنترنت (PWA).",
+	"main": "app.js",
+	"type": "module",
+	"scripts": {
+		"start": "node server.js",
+		"dev": "vercel dev"
+	},
+	"dependencies": {
+		"@google/genai": "^2.24.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.0"
+	},
+	"devDependencies": {
+		"vercel": "latest"
+	}
+}
